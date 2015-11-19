@@ -9,7 +9,7 @@ Install dependencies:
 npm install
 ```
 
-Run the server (Node.js):
+Start a local server:
 ```
 make server
 ```

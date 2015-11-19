@@ -35,9 +35,9 @@ export default class User extends React.Component {
     if (this.props.params.username !== current.username) {
       return(
         <Alert bsStyle="danger">
-          <p>No such user.</p>
-          <p>You can go to you profile by following this link:</p>
-          <p><Link to={`/user/${current.username}`}>Profile</Link></p>
+          <p>Ops, something went wrong.</p>
+          <p>You can go to your profile by following this link:</p>
+          <p><Link to={`/user/${current.username}`}>User Profile</Link></p>
         </Alert>
       );
     }
