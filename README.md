@@ -4,12 +4,19 @@
 
 ## Setup
 
+Clone the repository:
+
+```
+git clone https://github.com/CeRRuTiTo/pennypop-task.git
+cd pennypop-task
+```
+
 Install dependencies:
 ```
 npm install
 ```
 
-Start a local server:
+Start the local server:
 ```
 make server
 ```
