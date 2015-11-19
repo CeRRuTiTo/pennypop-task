@@ -16,7 +16,7 @@ function persist(state) {
 export default (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.SIGN_UP:
-      if (_.findWhere(state.users, action.user)) {
+      if (_.findWhere(state.users, {username: action.user.username})) {
         state = Object.assign({}, state, {
           error: "Username is already taken. Please, choose another one."
         });
@@ -25,6 +25,8 @@ export default (state = initialState, action) => {
       }
 
       state = Object.assign({}, state, {
+        isAuthenticated: true,
+        current: action.user,
         error: null,
         users: [
           ...state.users,
@@ -33,6 +35,8 @@ export default (state = initialState, action) => {
       });
 
       persist(state);
+
+      console.log(state);
 
       return state;
 

@@ -78,8 +78,8 @@ export default class App extends Component {
         {users.isAuthenticated && <Header actions={this.actions} />}
         <main>
           {children}
+          {error}
         </main>
-        {error}
       </div>
     );
   }

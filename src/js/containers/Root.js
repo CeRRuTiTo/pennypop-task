@@ -38,6 +38,8 @@ export default class Root extends React.Component {
             <Route component={Login} path="/login" />
             <Route component={Users} path="/users" />
             <Route component={User} path="/user/:username" onEnter={requireAuth} />
+
+            <Redirect from="/" to="/login" />
           </Route>
         </Router>
       </Provider>
