@@ -36,8 +36,6 @@ export default (state = initialState, action) => {
 
       persist(state);
 
-      console.log(state);
-
       return state;
 
 
